@@ -18,3 +18,23 @@ id = "c4160045cd4a4f29ba441725115451f4"
 
 [vars]
 HOST = "proxy.woyaoai.online"
+
+[env.jp]
+name = "greatwall-jp"
+workers_dev = false
+preview_urls = false
+
+[[env.jp.routes]]
+pattern = "proxy-jp.woyaoai.online"
+custom_domain = true
+
+[env.jp.placement]
+mode = "targeted"
+region = "aws:ap-northeast-1"
+
+[[env.jp.kv_namespaces]]
+binding = "KV"
+id = "637a630ed92f48088be501f74ceae26d"
+
+[env.jp.vars]
+HOST = "proxy-jp.woyaoai.online"
